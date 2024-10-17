@@ -11,7 +11,7 @@ contract LAIRegistration is Ownable {
             string apiKey;
             address userWallet;
         }
-        constructor() Ownable(address(this)) { }
+        constructor() Ownable(msg.sender) { }
 
     mapping(address => string) public apiKeys;
     mapping(uint256 => UserInfo) public apiKeysTG;
